@@ -27,7 +27,14 @@ def test_return_reversed_when_negative_input():
     result = sol.reverse(-12)
     assert result == -21
 
+
 def test_return_reversed_when_negative_input_big():
     sol = Solution()
-    result = sol.reverse(-12345678)
-    assert result == -87654321
+    result = sol.reverse(-123456)
+    assert result == -654321
+
+
+def test_return_zero_when_input_is_too_big():
+    sol = Solution()
+    result = sol.reverse(1534236469)
+    assert result == 0
